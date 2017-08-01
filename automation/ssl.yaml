@@ -1,0 +1,20 @@
+- alias: 'Auto Renew SSL Cert'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.ssl_cert_expiry
+    below: 29
+  action:
+    - service: shell_command.renew_ssl
+    - service: notify.slack
+      data:
+        message: "Cert update ran"
+
+- alias: 'SSL expiry notification'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.ssl_cert_expiry
+    below: 21
+  action:
+    - service: notify.slack
+      data:
+        message: "Cert update is failing"

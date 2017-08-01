@@ -1,0 +1,23 @@
+iphone_van_mans:
+  hide_if_away: false
+  mac: !secret iphone_mans.mac
+  name: iphone van mans
+  picture: !secret picture.mans
+  track: true
+  vendor:
+
+rw6:
+  hide_if_away: false
+  mac:
+  name: rw6
+  picture:
+  track: false
+  vendor:
+
+rw5:
+  hide_if_away: false
+  mac:
+  name: rw5
+  picture: !secret picture.mans
+  track: true
+  vendor:

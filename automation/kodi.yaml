@@ -1,0 +1,48 @@
+- alias: afternoonlibupdate
+  trigger:
+    platform: time
+    hours:   17
+    minutes: 00
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: >
+          {% if is_state('device_tracker.iphone_van_mans', 'home') %}
+            false
+          {% else %}
+            true
+          {% endif %}
+      - condition: template
+        value_template: >
+          {% if is_state('device_tracker.rw5', 'home') %}
+            false
+          {% else %}
+            true
+          {% endif %}  
+  action:
+    # - service: notify.slack
+    #   data:
+    #     message: 'Nu had ik kodi moeten gaan bijwerken 17'
+    #     target: '#kodi'
+    - service: shell_command.kodi_updatelibrary
+    - delay: 
+        minutes: 5
+    - service: shell_command.kodi_cleanlibrary
+
+- alias: earlylibupdate
+  trigger:
+    platform: time
+    hours:   05
+    minutes: 00
+    seconds: 00
+  condition:
+    condition: state
+    entity_id: media_player.WoonkamerTV
+    state: 'off'
+  action:
+    - service: shell_command.kodi_updatelibrary
+    - delay: 
+        minutes: 5
+    - service: shell_command.kodi_cleanlibrary

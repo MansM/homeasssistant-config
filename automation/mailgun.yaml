@@ -1,0 +1,9 @@
+- alias: huizenjacht trigger
+  trigger:
+    platform: event
+    event_type: mailgun_message_received
+  action:
+    - service: notify.slack
+      data_template:
+        target: '#huizenjacht'
+        message: "{{ trigger.event.data.from }} - {{ trigger.event.data.subject }}"

@@ -1,0 +1,55 @@
+#Homescreen
+default_view:
+  view: yes
+  entities:
+    - persistent_notification.update
+    - group.default_acties
+    - group.WoonkamerLampen
+    - group.Wasmachine
+    - group.tvs
+    - group.temps
+    - group.Aanwezigheid
+
+#Woonkamer tab
+Woonkamer:
+  view: yes
+  entities:
+    - group.WoonkamerLampen
+    - group.media_player
+    - group.Plant1
+
+#Planten tab
+# Planten:
+#   view: yes
+#   entities:
+#     - 
+#Bijkeuken tab
+Bijkeuken:
+  view: yes
+  entities:
+    - group.Wasmachine
+
+
+#Schoonmaak tab
+Schoonmaken:
+  view: yes
+  entities:
+    - group.Roomba
+
+#Nerdtab
+NerdStuff:
+  view: yes
+  entities:
+    - group.system_sensors
+    - group.synology
+    - group.synology_sda
+    - group.synology_sdb
+    - group.synology_sdc
+    - group.synology_sdd
+    - group.synology_sde
+    - group.http
+
+MiscSwitches:
+  view: yes
+  entities:
+    - input_boolean.vak_mode

@@ -1,0 +1,35 @@
+- alias: vakantiemode_lightson
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-01:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vak_mode
+        state: 'on'
+  action:
+    - service: notify.slack
+      data:
+        message: 'Vakantie Mode Lights On'
+        target: '#debug'
+
+- alias: vakantiemode_lightsoff
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vak_mode
+        state: 'on'
+  action:
+    - delay: '{{  "00:" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
+    - service: notify.slack
+      data:
+        message: 'Vakantie Mode Lights Off'
+        target: '#debug'
+ 
+

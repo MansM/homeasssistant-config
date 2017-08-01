@@ -1,0 +1,10 @@
+#Lampen
+AllLights:
+  entities:
+    - !secret switch.speakerlamp
+    - !secret switch.krabpaallamp
+
+WoonkamerLampen:
+  entities:
+    - !secret switch.speakerlamp
+    - !secret switch.krabpaallamp

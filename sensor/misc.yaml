@@ -1,0 +1,32 @@
+- platform: yr
+- platform: thinkingcleaner
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: memory_use_percent
+    - type: since_last_boot
+
+- platform: dnsip
+  hostname: !secret githuburl
+  resolver: 8.8.8.8
+  scan_interval: 7200
+
+- platform: dnsip
+  hostname: !secret githubpagesurl
+  resolver: 8.8.8.8
+  scan_interval: 7200
+
+- platform: miflora
+  mac: !secret miflora.mac
+  name: Flower 1
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery

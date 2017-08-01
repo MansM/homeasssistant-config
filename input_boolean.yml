@@ -1,0 +1,9 @@
+sleep_mode:
+  name: Sleep Mode
+  initial: off
+  icon: mdi:sleep
+
+vak_mode:
+  name: Vakantie Modus
+  #initial: off
+  icon: mdi:weather-sunny

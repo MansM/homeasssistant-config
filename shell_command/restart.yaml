@@ -1,0 +1,1 @@
+restart_bluetooth: "sudo systemctl restart bluetooth && sudo hciconfig hci0 up"

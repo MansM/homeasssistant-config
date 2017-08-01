@@ -1,0 +1,43 @@
+- alias: set wasmachine op bezig
+  trigger: 
+    - platform: numeric_state
+      entity_id: sensor.wasmachine_power
+      above: 5
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.wasmachine_status
+        state: 'uit'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.wasmachine_status
+        option: bezig
+
+- alias: set wasmachine op uit
+  trigger: 
+    - platform: state
+      entity_id: sensor.wasmachine_klaar
+      from: 'false'
+      to: 'true'
+      for:
+        minutes: 2
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.wasmachine_status        
+        state: 'bezig'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.wasmachine_status
+        option: uit
+    - service: notify.WoonkamerTV
+      data:
+        message: "Was is klaar!"
+    - service: notify.slack
+      data:
+        target: "wasmachine"
+        message: "Was is klaar!"

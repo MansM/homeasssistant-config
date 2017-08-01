@@ -1,0 +1,143 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude:  !secret gps.lat
+  longitude: !secret gps.long
+
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 4
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Amsterdam
+  customize: !include customize.yml
+
+
+#includes
+automation:     !include_dir_merge_list automation/
+group:          !include_dir_merge_named groups
+input_boolean:  !include input_boolean.yml
+input_select:   !include input_select.yml
+script:         !include script.yml
+sensor:         !include_dir_merge_list sensor/
+shell_command:  !include_dir_merge_named shell_command/
+zone:           !include zones.yaml
+zwave:          !include zwave.yml
+
+#just integrating stuff
+frontend:
+ios:
+config:
+updater:
+discovery:
+conversation:
+history:
+logbook:
+sun:
+
+mailgun:
+  domain: !secret mailgun.domain
+  api_key: !secret mailgun.apikey
+  sandbox: False
+
+mqtt:
+  broker: !secret mqtt.ip
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+
+device_tracker:
+  - platform: bluetooth_le_tracker
+    track_new_devices: false
+    interval_seconds: 300
+
+logger:
+  default: error
+  logs:
+    homeassistant.config: debug
+    homeassistant.setup: debug
+    homeassistant.components.automation: debug
+    homeassistant.components.media_player.denon: error
+    homeassistant.components.zwave: error
+    homeassistant.components.discovery: debug
+    homeassistant.components.device_tracker.bluetooth_le_tracker: debug
+    homeassistant.components.device_tracker: debug
+    homeassistant.components.http: error
+    homeassistant.components.shell_command: debug
+    homeassistant.components.websocket_api: error
+    homeassistant.components.updater: info
+    homeassistant.components.notify: debug
+
+# Show links to resources in log and frontend
+#introduction:
+
+
+influxdb:
+  host: !secret synology.ip
+
+# Enables configuration UI
+
+
+http:
+ api_password: !secret http.password
+ ssl_certificate: !secret http.cert
+ ssl_key: !secret http.key
+ base_url: !secret http.url
+ ip_ban_enabled: True
+ login_attempts_threshold: 5
+
+
+
+
+# Weather Prediction
+
+# Text to speech
+tts:
+  platform: google
+
+
+notify:
+  - platform: webostv
+    host: !secret woonkamertv.ip
+    name: WoonkamerTV
+    filename: webostv.conf
+  - platform: slack
+    name: slack
+    api_key: !secret slack.apikey
+    username: 'home-assistant'
+    default_channel: '#general'
+
+media_player:
+  - platform: webostv
+    name: WoonkamerTV
+    host: !secret woonkamertv.ip
+    mac: !secret woonkamertv.mac
+
+  - platform: denon
+    name: MarantzSR7005
+    host: !secret marantz.ip
+    mac: !secret marantz.mac
+
+  - platform: kodi
+    name: kodi
+    host: !secret kodi.ip
+
+panel_iframe:
+  temperatuur:
+    title: 'Temperatuur'
+    icon: mdi:thermometer
+    url: !secret temperatuur.url
+#broken as it is not over ssl
+
+recorder:
+  db_url: !secret mysql_connection_string
+
+switch:
+  - platform: thinkingcleaner
+
+rest_command:
+  kodilibupdate:
+    url: !secret kodi_jsonrpc_url
+    payload: '{ "jsonrpc": "2.0", "method": "VideoLibrary.Scan"}'
+    content_type: 'application/json'

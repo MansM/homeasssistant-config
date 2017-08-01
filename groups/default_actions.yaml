@@ -1,0 +1,5 @@
+#Acties
+default_acties:
+  name: Sleep Mode
+  entities:
+    - input_boolean.sleep_mode

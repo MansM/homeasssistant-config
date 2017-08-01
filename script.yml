@@ -1,0 +1,8 @@
+sleep:
+  sequence:
+    - service: switch.turn_off
+      entity_id: group.WoonkamerLampen
+    - service: media_player.turn_off
+      entity_id:
+        - media_player.WoonkamerTV
+        - media_player.MarantzSR7005

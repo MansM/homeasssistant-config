@@ -1,0 +1,64 @@
+group.default_acties:
+  friendly_name: Sleep Mode
+  order: 1
+
+group.WoonkamerLampen:
+  icon: mdi:lamp
+  friendly_name: Lampen
+  order: 2
+
+
+## Fibaro plugs
+
+!secret switch.speakerlamp:
+  icon: mdi:lamp
+  friendly_name: Speakerlamp
+
+!secret switch.krabpaallamp:
+  icon: mdi:lamp
+  friendly_name: Krabpaallamp
+
+switch.fibaro_system_fgwpef_wall_plug_switch_4_0:
+  icon: mdi:washing-machine
+  friendly_name: Wasmachine Stekker
+
+sensor.fibaro_system_fgwpef_wall_plug_energy_4_0:
+  icon: mdi:washing-machine
+  friendly_name: Wasmachine totaal verbruik
+
+sensor.fibaro_system_fgsd002_smoke_sensor_temperature_5_1:
+  icon: mdi:thermometer
+  friendly_name: Woonkamer
+
+# input_booleans
+input_boolean.sleep_mode:
+  icon: mdi:sleep
+  friendly_name: Sleep Mode
+
+## wasmachine
+sensor.wasmachine_status:
+  icon: mdi:washing-machine
+  friendly_name: wasmachine
+
+input_select.wasmachine_status:
+  icon: mdi:washing-machine
+  friendly_name: wasmachine
+
+#roomba
+switch.roomba_clean:
+  friendly_name: Clean
+
+switch.roomba_dock:
+  friendly_name: Dock
+
+switch.roomba_find:
+  friendly_name: Find
+
+#device_trackers
+device_tracker.iphone_van_mans:
+  friendly_name: Mans
+  entity_picture: !secret picture.mans
+
+device_tracker.rw5:
+  friendly_name: Rianne
+  entity_picture: !secret picture.rianne

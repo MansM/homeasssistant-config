@@ -1,0 +1,39 @@
+synology:
+  name: nas
+  entities:
+    - sensor.status_volume_1
+
+synology_sda:
+  name: disk1
+  entities:
+    - sensor.status_smart_sda
+    - sensor.status_sda
+    - sensor.temperature_sda
+
+synology_sdb:
+  name: disk2
+  entities:
+    - sensor.status_smart_sdb
+    - sensor.status_sdb
+    - sensor.temperature_sdb
+
+synology_sdc:
+  name: disk3
+  entities:
+    - sensor.status_smart_sdc
+    - sensor.status_sdc
+    - sensor.temperature_sdc
+
+synology_sdd:
+  name: disk4
+  entities:
+    - sensor.status_smart_sdd
+    - sensor.status_sdd
+    - sensor.temperature_sdd
+
+synology_sde:
+  name: disk5
+  entities:
+    - sensor.status_smart_sde
+    - sensor.status_sde
+    - sensor.temperature_sde

@@ -1,0 +1,26 @@
+- alias: HomeAssistantReboot
+  trigger:
+    platform: homeassistant
+    # Event can also be 'shutdown'
+    event: start
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: >
+          {% if is_state('device_tracker.iphone_van_mans', 'home') %}
+            false
+          {% else %}
+            true
+          {% endif %}
+      - condition: template
+        value_template: >
+          {% if is_state('device_tracker.rw5', 'home') %}
+            false
+          {% else %}
+            true
+          {% endif %}  
+  action:
+    - service: notify.slack
+      data:
+        message: 'HomeAssistant has restarted'

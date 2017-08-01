@@ -1,0 +1,10 @@
+- alias: sleep
+  trigger:
+    - platform: state
+      entity_id: input_boolean.sleep_mode
+      to: 'on'
+      from: 'off'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.sleep_mode
+    - service: script.sleep

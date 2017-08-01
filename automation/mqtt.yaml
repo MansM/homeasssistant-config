@@ -1,0 +1,20 @@
+- alias: Sending download messages
+  trigger:
+    platform: mqtt
+    topic: /downloads
+  action:
+  - service: notify.slack
+    data_template:
+      target: "#downloads"
+      message: "{{ trigger.payload | string() }}"
+
+- alias: Sending Synology status messages
+  trigger:
+    platform: mqtt
+    topic: /synology
+  action:
+  - service: notify.slack
+    data_template:
+      target: "#synology"
+      message: "{{ trigger.payload | string() }}"
+#Using this docker container as a sms 2 mqtt bridge on my synology https://github.com/MansM/smsmqtt

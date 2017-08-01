@@ -1,0 +1,48 @@
+#Wasmachine
+Wasmachine:
+  entities:
+    - sensor.wasmachine_status
+    - switch.wasmachine_switch
+    - !secret sensor.fibaro.wasmachine_total
+
+tvs:
+  entities:
+    - media_player.WoonkamerTV
+
+media_player:
+  entities:
+    - media_player.WoonkamerTV
+    - media_player.MarantzSR7005
+    - media_player.kodi
+
+temps:
+  entities:
+    - sensor.rookmelder_temperature
+
+Roomba:
+  entities:
+    - sensor.roomba_state
+    - sensor.roomba_battery
+    - sensor.roomba_capacity
+    - switch.roomba_clean
+    - switch.roomba_dock
+    - switch.roomba_find
+
+Aanwezigheid:
+  entities:
+    - device_tracker.iphone_van_mans
+    - device_tracker.rw5
+
+Plant1:
+  entities:
+    - sensor.flower_1_battery
+    - sensor.flower_1_conductivity
+    - sensor.flower_1_light_intensity
+    - sensor.flower_1_moisture
+    - sensor.flower_1_temperature
+
+http:
+  entities:
+    - sensor.ssl_cert_expiry
+    - !secret sensor.githuburlshort
+    - !secret sensor.githubpagesurlshort
