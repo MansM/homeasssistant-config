@@ -6,3 +6,4 @@ install:
   - pip install --upgrade homeassistant
 script:
   - find . -name "*.y*ml" |xargs yamllint
+  - hass --script check_config -c .
