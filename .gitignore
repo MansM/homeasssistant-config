@@ -1,3 +1,4 @@
 secrets.yaml
 zones.yaml
 !travisci/secrets.yaml
+!travisci/zones.yaml

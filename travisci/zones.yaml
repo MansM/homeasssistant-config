@@ -1,0 +1,5 @@
+- name: "work"
+  latitude:  0.00000000
+  longitude: 0.00000000
+  radius: 200
+  icon: mdi:bank
