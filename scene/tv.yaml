@@ -1,0 +1,8 @@
+- name: LiveTV
+  entities:
+    media_player.marantzsr7005:
+      state: on
+      source: TV
+    media_player.woonkamertv:
+      state: on
+      source: LiveTV

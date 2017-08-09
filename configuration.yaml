@@ -20,6 +20,7 @@ group:          !include_dir_merge_named groups
 input_boolean:  !include input_boolean.yml
 input_select:   !include input_select.yml
 script:         !include script.yml
+scene:          !include_dir_merge_list scene/
 sensor:         !include_dir_merge_list sensor/
 shell_command:  !include_dir_merge_named shell_command/
 zone:           !include zones.yaml
