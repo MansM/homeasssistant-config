@@ -1,2 +1,3 @@
+# yamllint disable rule:line-length
 kodi_updatelibrary: "/usr/bin/curl -X POST --data-binary '{ \"jsonrpc\": \"2.0\", \"method\": \"VideoLibrary.Scan\"}' -H 'content-type: application/json;' http://10.0.1.125:8080/jsonrpc"
 kodi_cleanlibrary: "/usr/bin/curl -X POST --data-binary '{ \"jsonrpc\": \"2.0\", \"method\": \"VideoLibrary.Clean\"}' -H 'content-type: application/json;' http://10.0.1.125:8080/jsonrpc"
