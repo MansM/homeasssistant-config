@@ -1,7 +1,7 @@
 - alias: Checking github pages ips
   trigger:
     platform: time
-    hours:   17
+    hours: 17
     minutes: 00
     seconds: 00
   condition:
@@ -14,5 +14,6 @@
       data:
         message: 'github pages ip has changed'
 
+# yamllint disable rule:line-length
 # We are not allowed to put secrets in a template so the template is like this:
 # "{%- if sensor.url1 !=  sensor.url2 -%} true  {%- else -%} false {%- endif -%}"

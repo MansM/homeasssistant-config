@@ -26,6 +26,7 @@
         entity_id: input_boolean.vak_mode
         state: 'on'
   action:
+    # yamllint disable-line rule:line-length
     - delay: '{{  "00:" ~ ((range(1, 59) | random) | int)  ~ ":" ~  ((range(1, 59) | random) | int) }}'
     - service: notify.slack
       data:

@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.4"
+install:
+  - pip install yamllint
+  - pip install --upgrade homeassistant
+script:
+  - find . -name "*.y*ml" |xargs yamllint

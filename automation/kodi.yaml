@@ -1,7 +1,7 @@
 - alias: afternoonlibupdate
   trigger:
     platform: time
-    hours:   17
+    hours: 17
     minutes: 00
     seconds: 00
   condition:
@@ -20,21 +20,21 @@
             false
           {% else %}
             true
-          {% endif %}  
+          {% endif %}
   action:
     # - service: notify.slack
     #   data:
     #     message: 'Nu had ik kodi moeten gaan bijwerken 17'
     #     target: '#kodi'
     - service: shell_command.kodi_updatelibrary
-    - delay: 
+    - delay:
         minutes: 5
     - service: shell_command.kodi_cleanlibrary
 
 - alias: earlylibupdate
   trigger:
     platform: time
-    hours:   05
+    hours: 05
     minutes: 00
     seconds: 00
   condition:
@@ -43,6 +43,6 @@
     state: 'off'
   action:
     - service: shell_command.kodi_updatelibrary
-    - delay: 
+    - delay:
         minutes: 5
     - service: shell_command.kodi_cleanlibrary
