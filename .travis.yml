@@ -4,7 +4,7 @@ python:
 install:
   - pip install yamllint
   - pip install --upgrade homeassistant
-  - cp travisci/secrets.yaml .
 script:
+  - cp travisci/secrets.yaml .
   - find . -name "*.y*ml" |xargs yamllint
   - hass --script check_config -c .
