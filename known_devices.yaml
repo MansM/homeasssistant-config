@@ -11,7 +11,7 @@ rw6:
   mac:
   name: rw6
   picture:
-  track: false
+  track: true
   vendor:
 
 rw5:
@@ -19,5 +19,5 @@ rw5:
   mac:
   name: rw5
   picture: !secret picture.mans
-  track: true
+  track: false
   vendor:

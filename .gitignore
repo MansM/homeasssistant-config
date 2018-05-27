@@ -2,3 +2,14 @@ secrets.yaml
 zones.yaml
 !travisci/secrets.yaml
 !travisci/zones.yaml
+deps
+.uuid
+*.log
+webostv.conf
+.HA_VERSION
+.ios.conf
+OZW_Log.txt
+options.xml
+entity_registry.yaml
+pyozw.sqlite
+zwcfg_0xdbe5c6d8.xml

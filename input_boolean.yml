@@ -7,3 +7,8 @@ vak_mode:
   name: Vakantie Modus
   #initial: off
   icon: mdi:weather-sunny
+
+livetv:
+  name: LiveTV
+  #initial: off
+  icon: mdi:tv

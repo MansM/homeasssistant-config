@@ -82,8 +82,8 @@ influxdb:
 
 http:
  api_password: !secret http.password
- ssl_certificate: !secret http.cert
- ssl_key: !secret http.key
+ #ssl_certificate: !secret http.cert
+ #ssl_key: !secret http.key
  base_url: !secret http.url
  ip_ban_enabled: True
  login_attempts_threshold: 5
@@ -114,6 +114,11 @@ media_player:
     name: WoonkamerTV
     host: !secret woonkamertv.ip
     mac: !secret woonkamertv.mac
+    customize:
+      sources:
+        - livetv
+        - youtube
+        - netflix
 
   - platform: denon
     name: MarantzSR7005

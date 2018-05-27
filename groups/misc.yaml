@@ -31,7 +31,7 @@ Roomba:
 Aanwezigheid:
   entities:
     - device_tracker.iphone_van_mans
-    - device_tracker.rw5
+    - device_tracker.rw6
 
 Plant1:
   entities:

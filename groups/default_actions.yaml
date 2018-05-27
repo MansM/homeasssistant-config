@@ -3,3 +3,5 @@ default_acties:
   name: Sleep Mode
   entities:
     - input_boolean.sleep_mode
+    - input_boolean.livetv
+    - scene.LiveTV

@@ -1,0 +1,18 @@
+- alias: liveTV
+  trigger:
+    - platform: state
+      entity_id: input_boolean.livetv
+      to: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.livetv
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.marantzsr7005
+        source: TV
+    - delay:
+        seconds: 2
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.woonkamertv
+        source: LiveTV

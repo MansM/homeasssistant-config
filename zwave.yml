@@ -1,4 +1,4 @@
-usb_path: /dev/ttyAMA0
+usb_path: /dev/ttyS0
 #config_path: /srv/homeassistant/lib/python3.4/site-packages/python_openzwave/ozw_config
 polling_interval: 30000
 device_config:
@@ -6,4 +6,3 @@ device_config:
     polling_intensity: 1
   sensor.fibaro_system_fgwpef_wall_plug_power_7_8:
     polling_intensity: 1
-new_entity_ids: true
