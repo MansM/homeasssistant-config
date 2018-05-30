@@ -13,3 +13,5 @@ options.xml
 entity_registry.yaml
 pyozw.sqlite
 zwcfg_0xdbe5c6d8.xml
+plex.conf
+zwscene.xml

@@ -59,6 +59,6 @@ device_tracker.iphone_van_mans:
   friendly_name: Mans
   entity_picture: !secret picture.mans
 
-device_tracker.rw5:
+device_tracker.rw6:
   friendly_name: Rianne
   entity_picture: !secret picture.rianne
