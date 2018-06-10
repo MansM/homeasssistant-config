@@ -26,9 +26,9 @@ sensor.fibaro_system_fgwpef_wall_plug_energy_4_0:
   icon: mdi:washing-machine
   friendly_name: Wasmachine totaal verbruik
 
-sensor.fibaro_system_fgsd002_smoke_sensor_temperature_5_1:
+sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
   icon: mdi:thermometer
-  friendly_name: Woonkamer
+  friendly_name: Temperatuur Woonkamer
 
 # input_booleans
 input_boolean.sleep_mode:
