@@ -30,3 +30,7 @@
     - temperature
     - conductivity
     - battery
+
+- platform: postnl
+  username: !secret postnl.username
+  password: !secret postnl.password

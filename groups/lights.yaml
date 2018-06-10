@@ -3,8 +3,10 @@ AllLights:
   entities:
     - !secret switch.speakerlamp
     - !secret switch.krabpaallamp
+    - light.plafondlamp
 
 WoonkamerLampen:
   entities:
     - !secret switch.speakerlamp
     - !secret switch.krabpaallamp
+    - light.plafondlamp
