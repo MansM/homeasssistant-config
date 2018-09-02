@@ -1,12 +1,12 @@
 #Lampen
 AllLights:
   entities:
-    - !secret switch.speakerlamp
+    - !secret light.ikea
     - !secret switch.krabpaallamp
     - light.plafondlamp
 
 WoonkamerLampen:
   entities:
-    - !secret switch.speakerlamp
+    - !secret light.ikea
     - !secret switch.krabpaallamp
     - light.plafondlamp
