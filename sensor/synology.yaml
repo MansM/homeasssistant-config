@@ -10,3 +10,8 @@
     - disk_temp
     - disk_status
     - volume_status
+    - cpu_1min_load
+    - cpu_5min_load
+    - cpu_15min_load
+    - memory_real_usage
+    - memory_total_swap

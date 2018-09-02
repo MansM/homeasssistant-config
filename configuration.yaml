@@ -36,6 +36,7 @@ conversation:
 history:
 logbook:
 sun:
+map:
 
 mailgun:
   domain: !secret mailgun.domain

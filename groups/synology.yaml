@@ -2,6 +2,11 @@ synology:
   name: nas
   entities:
     - sensor.status_volume_1
+#    - cpu_1min_load
+#    - cpu_5min_load
+#    - cpu_15min_load
+#    - memory_real_usage
+#    - memory_total_swap
 
 synology_sda:
   name: disk1
