@@ -38,6 +38,12 @@ logbook:
 sun:
 map:
 
+homekit:
+  auto_start: False
+  filter:
+    exclude_domains:
+      - device_tracker
+
 mailgun:
   domain: !secret mailgun.domain
   api_key: !secret mailgun.apikey
