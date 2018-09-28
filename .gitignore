@@ -16,3 +16,7 @@ zwcfg_0xdbe5c6d8.xml
 plex.conf
 zwscene.xml
 .config_entries.json
+.homekit.state
+.homekit.state.old
+.storage-bak/
+.storage
