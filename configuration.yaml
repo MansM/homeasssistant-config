@@ -76,7 +76,7 @@ logger:
     homeassistant.components.websocket_api: error
     homeassistant.components.updater: info
     homeassistant.components.notify: debug
-    homeassistant.components.homekit: debug
+    homeassistant.components.homekit: error
 
 # Show links to resources in log and frontend
 #introduction:

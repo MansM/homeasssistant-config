@@ -1,7 +1,5 @@
 sleep:
   sequence:
-    - service: switch.turn_off
-      entity_id: group.WoonkamerLampen
     - service: light.turn_off
       entity_id: group.WoonkamerLampen
     - service: media_player.turn_off

@@ -1,6 +1,6 @@
 #Acties
 default_acties:
-  name: Sleep Mode
+  name: Slaap Modus
   entities:
     - input_boolean.sleep_mode
     #- input_boolean.livetv

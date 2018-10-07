@@ -2,11 +2,11 @@
 AllLights:
   entities:
     - !secret light.ikea
-    - !secret switch.krabpaallamp
+    - !secret light.ikealinks
     - light.plafondlamp
 
 WoonkamerLampen:
   entities:
     - !secret light.ikea
-    - !secret switch.krabpaallamp
+    - !secret light.ikealinks
     - light.plafondlamp

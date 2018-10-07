@@ -33,7 +33,7 @@ sensor.fibaro_system_fgsd002_smoke_sensor_temperature:
 # input_booleans
 input_boolean.sleep_mode:
   icon: mdi:sleep
-  friendly_name: Sleep Mode
+  friendly_name: Slaap Mode
 
 ## wasmachine
 sensor.wasmachine_status:
