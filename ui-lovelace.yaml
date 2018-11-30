@@ -1,0 +1,31 @@
+title: My Awesome Home
+views:
+  - title: Default
+    cards:
+        # The markdown card will render markdown text.
+
+      - type: entity-filter
+        card: 
+          type: glance
+          title: Thuis  
+        entities:
+          - device_tracker.iphone_van_mans
+          - device_tracker.rw6
+          - device_tracker.Cat
+        state_filter:
+          - home
+        
+      - type: entity-filter
+        card: 
+          type: glance
+          title: Lights
+        entities:
+          - light.plafondlamp
+          - light.color_temperature_light_1
+          - light.color_temperature_light_1_2
+        state_filter:
+          - "on"
+
+  # - title: NerdStuff
+  #   cards:
+

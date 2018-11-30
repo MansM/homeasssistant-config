@@ -21,3 +21,11 @@ rw5:
   picture: !secret picture.mans
   track: false
   vendor:
+
+cat:
+  hide_if_away: false
+  icon:
+  mac:
+  name: cat
+  picture:
+  track: false

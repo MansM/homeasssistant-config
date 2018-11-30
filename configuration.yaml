@@ -44,6 +44,15 @@ homekit:
     exclude_domains:
       - device_tracker
 
+google_assistant:
+  project_id: !secret google.project
+  api_key: !secret google.apikey
+  exposed_domains:
+    - switch
+    - light
+    - group
+    - media_player
+
 mailgun:
   domain: !secret mailgun.domain
   api_key: !secret mailgun.apikey
@@ -82,8 +91,8 @@ logger:
 #introduction:
 
 
-influxdb:
-  host: !secret synology.ip
+#influxdb:
+#  host: !secret synology.ip
 
 # Enables configuration UI
 
@@ -149,8 +158,8 @@ panel_iframe:
 #broken as it is not over ssl
 
 recorder:
-  db_url: !secret mysql_connection_string
-  purge_keep_days: 10
+#  db_url: !secret mysql_connection_string
+#  purge_keep_days: 10
 
 switch:
   - platform: thinkingcleaner
