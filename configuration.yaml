@@ -26,6 +26,7 @@ shell_command:  !include_dir_merge_named shell_command/
 zone:           !include zones.yaml
 zwave:          !include zwave.yml
 
+wake_on_lan:
 #just integrating stuff
 frontend:
 ios:
@@ -52,7 +53,19 @@ google_assistant:
     - light
     - group
     - media_player
-
+  entity_config:
+    media_player.WoonkamerTV:
+      name: tv
+      expose: true
+      room: Woonkamer
+    !secret light.ikea:
+      name: lamp rechts
+      expose: true
+      room: Woonkamer
+    !secret light.ikealinks:
+      name: lamp links
+      expose: true
+      room: Woonkamer
 mailgun:
   domain: !secret mailgun.domain
   api_key: !secret mailgun.apikey
@@ -86,6 +99,8 @@ logger:
     homeassistant.components.updater: info
     homeassistant.components.notify: debug
     homeassistant.components.homekit: error
+    homeassistant.components.google_assistant.smart_home: debug
+    homeassistant.components.google_assistant: debug
 
 # Show links to resources in log and frontend
 #introduction:
@@ -135,6 +150,10 @@ media_player:
     name: WoonkamerTV
     host: !secret woonkamertv.ip
     mac: !secret woonkamertv.mac
+    turn_on_action:
+      service: wake_on_lan.send_magic_packet
+      data:
+        mac: !secret woonkamertv.mac
     customize:
       sources:
         - livetv
