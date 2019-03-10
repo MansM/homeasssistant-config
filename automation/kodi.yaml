@@ -1,6 +1,6 @@
 - alias: afternoonlibupdate
   trigger:
-    platform: time
+    platform: time_pattern
     hours: '17'
     minutes: '0'
     seconds: '0'
@@ -33,7 +33,7 @@
 
 - alias: earlylibupdate
   trigger:
-    platform: time
+    platform: time_pattern
     hours: '5'
     minutes: '0'
     seconds: '0'

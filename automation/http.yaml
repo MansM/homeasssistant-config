@@ -1,6 +1,6 @@
 - alias: Checking github pages ips
   trigger:
-    platform: time
+    platform: time_pattern
     hours: '17'
     minutes: '0'
     seconds: '0'
