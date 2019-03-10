@@ -137,7 +137,7 @@ tts:
 notify:
   - platform: webostv
     host: !secret woonkamertv.ip
-    name: WoonkamerTV
+    name: woonkamertv
     filename: webostv.conf
   - platform: slack
     name: slack
@@ -147,7 +147,7 @@ notify:
 
 media_player:
   - platform: webostv
-    name: WoonkamerTV
+    name: woonkamertv
     host: !secret woonkamertv.ip
     mac: !secret woonkamertv.mac
     turn_on_action:

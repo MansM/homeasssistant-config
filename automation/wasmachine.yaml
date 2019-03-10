@@ -34,7 +34,7 @@
       data:
         entity_id: input_select.wasmachine_status
         option: uit
-    - service: notify.WoonkamerTV
+    - service: notify.woonkamertv
       data:
         message: "Was is klaar!"
     - service: notify.slack
