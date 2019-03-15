@@ -1,4 +1,4 @@
-- name: LiveTV
+- name: werktniet
   entities:
     media_player.marantzsr7005:
       state: on
