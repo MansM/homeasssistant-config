@@ -9,6 +9,6 @@ vak_mode:
   icon: mdi:weather-sunny
 
 livetv:
-  name: LiveTV
+  name: livetv
   #initial: off
   icon: mdi:tv
