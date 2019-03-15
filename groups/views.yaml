@@ -53,3 +53,4 @@ MiscSwitches:
   view: yes
   entities:
     - input_boolean.vak_mode
+    - input_boolean.livetv
