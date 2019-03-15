@@ -8,7 +8,7 @@
       entity_id: input_boolean.livetv
     - service: media_player.select_source
       data:
-        entity_id: media_player.marantzsr7005
+        entity_id: media_player.marantz_sr7005
         source: TV
     - delay:
         seconds: 2

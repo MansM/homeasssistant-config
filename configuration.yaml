@@ -54,7 +54,7 @@ google_assistant:
     - group
     - media_player
   entity_config:
-    media_player.WoonkamerTV:
+    media_player.woonkamertv:
       name: tv
       expose: true
       room: Woonkamer
