@@ -7,12 +7,12 @@ Wasmachine:
 
 tvs:
   entities:
-    - media_player.WoonkamerTV
+    - media_player.woonkamertv
 
 media_player:
   entities:
-    - media_player.WoonkamerTV
-    - media_player.MarantzSR7005
+    - media_player.woonkamertv
+    - media_player.marantz_sr7005
     - media_player.kodi
 
 temps:
