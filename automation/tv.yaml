@@ -1,6 +1,6 @@
 - alias: liveTV
   trigger:
-    - platform: state
+    - platform: state_changed
       entity_id: input_boolean.livetv
       to: 'on'
   action:
