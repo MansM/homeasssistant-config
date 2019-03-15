@@ -51,7 +51,7 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    - group
+    - input_boolean
     - media_player
   entity_config:
     media_player.woonkamertv:
