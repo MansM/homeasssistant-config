@@ -161,7 +161,7 @@ media_player:
         - netflix
 
   - platform: denon
-    name: marantzsr7005
+    name: marantz_sr7005
     host: !secret marantz.ip
     mac: !secret marantz.mac
 
