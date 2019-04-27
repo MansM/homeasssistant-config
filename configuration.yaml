@@ -54,10 +54,6 @@ google_assistant:
     - input_boolean
     - media_player
   entity_config:
-    media_player.shield_2:
-      name: shield
-      expose: true
-      room: Woonkamer
     media_player.woonkamertv:
       name: tv
       expose: true
