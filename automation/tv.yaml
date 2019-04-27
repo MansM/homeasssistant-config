@@ -1,4 +1,4 @@
-- alias: liveTV
+- alias: ziggo
   trigger:
     - platform: state
       entity_id: input_boolean.livetv

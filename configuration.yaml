@@ -54,6 +54,10 @@ google_assistant:
     - input_boolean
     - media_player
   entity_config:
+    media_player.shield_2:
+      name: shield
+      expose: true
+      room: Woonkamer
     media_player.woonkamertv:
       name: tv
       expose: true
@@ -176,6 +180,16 @@ panel_iframe:
     url: !secret temperatuur.url
 #broken as it is not over ssl
 
+person:
+  - name: Mans
+    id: mans1234
+    device_trackers:
+      - device_tracker.iphone_van_mans
+
+  - name: Rianne
+    id: rianne1234
+    device_trackers:
+      - device_tracker.rw6
 recorder:
 #  db_url: !secret mysql_connection_string
 #  purge_keep_days: 10
